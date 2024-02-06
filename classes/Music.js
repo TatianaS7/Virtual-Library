@@ -8,14 +8,14 @@ class Music extends Media {
         this.length = length
     }
     summary() {
-        return `Title: ${this.title}, Artist: ${this.artist} Year: ${this.year}, Genre: ${this.genre}, Length: ${this.length}`
+        return `Title: ${this.title}, Artist: ${this.artist}, Year: ${this.year}, Genre: ${this.genre}, Length: ${this.length} seconds`
     }
-    static shortistAlbum(arr) {
+    static shortestAlbum(arr) {
         let short = arr[0]
-        for (song in arr) {
+        for (let song of arr) {
             if (song.length < short.length) short = song
         }
-        return song
+        return short
     }
 }
 // don't change below
