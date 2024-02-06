@@ -14,7 +14,14 @@ class Book extends Media {
         return `Title: ${this.title}, Author: ${this.author}, Year: ${this.year}, Page Count: ${this.numPages}, Genre: ${this.genre}, Rating: ${this.rating}`;
     }
     static highestRating(books) {
-        return Math.max(books);
+        let highestBook = books[0];
+
+        books.forEach(book => {
+           if (book.rating > highestBook.rating) {
+            highestBook = book
+           }
+        });
+        return highestBook;
     }
 }
 
