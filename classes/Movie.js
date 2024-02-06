@@ -1,5 +1,5 @@
 // import the Media class:
-import Media from ".classes/Media.js";
+const Media = require( ".classes/Media.js";)
 
 // create your Movie class:
 class Movie extends Media {
